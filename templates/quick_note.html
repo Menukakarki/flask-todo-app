@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Quick Note
+{% endblock title %}
+
+{% block body %}
+<div class="container my-4">
+  <h2>Quick Note</h2>
+  <form method="POST" action="/quick-note">
+    <div class="mb-3">
+      <label for="note" class="form-label">Your Note</label>
+      <textarea class="form-control" id="note" name="note" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-outline-success">Submit</button>
+    <a href="/" class="btn btn-secondary ms-2">Back</a>
+  </form>
+</div>
+{% endblock body %}

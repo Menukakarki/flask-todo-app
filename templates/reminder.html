@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Set Reminder</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+<body class="p-4">
+
+  <div class="container">
+    <h2 class="mb-4">Set a Reminder</h2>
+    <form id="reminderForm">
+      <div class="mb-3">
+        <label for="task" class="form-label">Task</label>
+        <input type="text" class="form-control" id="task" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Task Description</label>
+        <textarea class="form-control" id="description" rows="3" required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="date" class="form-label">Date</label>
+        <input type="date" class="form-control" id="date" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="time" class="form-label">Time</label>
+        <input type="time" class="form-control" id="time" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Set Reminder</button>
+    </form>
+  </div>
+
+  <script>
+    console.log("✅ JavaScript is running!");
+
+    // Delete confirmation
+    document.addEventListener("DOMContentLoaded", function () {
+      const deleteButtons = document.querySelectorAll("a[href^='/delete/']");
+
+      deleteButtons.forEach(button => {
+        button.addEventListener("click", function (e) {
+          const confirmDelete = confirm("Are you sure you want to delete this todo?");
+          if (!confirmDelete) {
+            e.preventDefault();
+          }
+        });
+      });
+
+      // Reminder form handling
+      const form = document.getElementById('reminderForm');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          const task = document.getElementById('task').value;
+          const desc = document.getElementById('description').value;
+          const date = document.getElementById('date').value;
+          const time = document.getElementById('time').value;
+
+          const targetTime = new Date(`${date}T${time}`);
+          const now = new Date();
+          const diff = targetTime - now;
+
+          if (diff <= 0) {
+            alert("Reminder time must be in the future!");
+            return;
+          }
+
+          alert("Reminder is set!");
+
+          setTimeout(() => {
+            alert(`🔔 Reminder!\n\nTask: ${task}\nDescription: ${desc}`);
+          }, diff);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>

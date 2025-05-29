@@ -1,0 +1,203 @@
+/* ==== GLOBAL ==== */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF8DC;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #BFBA9F;
+}
+
+/* ==== HEADINGS ==== */
+h2 {
+  color: #BF9663;
+}
+
+/* ==== NAVBAR ==== */
+.navbar {
+  background-color: #011640 !important;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar .nav-link:hover {
+  color: #7BA696 !important;
+}
+
+/* ==== DROPDOWN MENU ==== */
+.dropdown-menu {
+  background-color: #011640;
+  border: 1px solid #7BA696;
+  z-index: 1050;
+  position: absolute;
+}
+
+.dropdown-item {
+  color: #ffffff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #2D5873 !important;
+  color: #FFFFFF !important;
+}
+
+/* ==== FORM SECTION ==== */
+.container {
+  background-color: #fcf5ec;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+label {
+  font-weight: 600;
+  color: #30387c;
+}
+
+input[type="text"] {
+  border: 1px solid #7BA696;
+  border-radius: 4px;
+}
+
+/* ==== FORM FIELDS ==== */
+.form-control {
+  background-color: #ffffff;
+  color: #ffffff;
+  border: 1px solid #7BA696;
+  font-weight: bold;
+}
+
+.form-control:focus {
+  background-color: #FFF8DC;
+  color: #b4864d;
+  border-color: #BF9663;
+  box-shadow: 0 0 5px #BF9663;
+  
+}
+
+/* ==== BUTTONS ==== */
+.btn-outline-success {
+  color: #FFFFFF;
+  background-color: #011640;
+  border-color: #011640;
+}
+
+.btn-outline-success:hover {
+  background-color: #BF9663;
+  border-color: #BF9663;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #7BA696;
+  border-color: #7BA696;
+}
+
+.btn-primary:hover {
+  background-color: #2D5873;
+  border-color: #2D5873;
+}
+
+.btn-update {
+  background-color: #7BA696;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-update:hover {
+  background-color: #2D5873;
+  color: #ffffff;
+}
+
+.btn-delete {
+  background-color: #BF9663;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-delete:hover {
+  background-color: #011640;
+  color: #ffffff;
+}
+
+/* ==== TABLE STYLING ==== */
+.custom-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.custom-table thead {
+  background-color: #2D5873;
+  color: #dbd8c3;
+}
+
+.custom-table th {
+  border: 2px solid #011640;
+  font-weight: 600;
+  background-color: #c9c4ab;
+}
+
+.custom-table td {
+  border: 2px solid #011640;
+  color: #011640;
+}
+
+.custom-table tbody tr:nth-child(odd) {
+  background-color: #F5F5F5;
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: #EDEDED;
+}
+
+.custom-table tbody tr:hover {
+  background-color: #7BA696;
+  color: white;
+}
+
+.sno-col {
+  background-color: #BF9663;
+  color: #011640;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ==== ABOUT SECTION ==== */
+#about {
+  background-color: #FFF8DC;
+  color: #011640;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+#about p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ==== FOOTER ==== */
+footer {
+  background-color: #fcfaf2;
+  color: #BFBA9F;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+.navbar-toggler-icon {
+  filter: invert(100%); /* makes it white */
+  border: #BFBA9F;
+}
+.special-form {
+  background-color: #FFF8DC; /* off gold */
+  color: #ffffff;            /* white text */
+  padding: 30px;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
